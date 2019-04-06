@@ -12,15 +12,18 @@ client.on('ready', () => {
 
  
 
-client.on('message', message => {
+client.on('message', function (message) {
+    if (message.content === 'fanta') {
+    const voc = message.member.voiceChannel
+    console.log(voc)
 
-    if (message.content === 'ping') {
+    if (typeof(voc) !== 'undefined'){
+    voc.join()
+    .then(connection => {connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()})})
+ }
 
-       message.reply('pong');
-
-       }
-
-});
+}
+})
 
  
 
