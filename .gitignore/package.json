@@ -1,19 +1,15 @@
 {
-
-  "name": "Example",
-
-  "description": "Example",
-
-  "version": "0.0.0",
-
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
   "main": "bot.js",
-
-  "scripts": {
+  
+    "scripts": {
 
     "start": "node bot.js"
 
   },
-
+  
   "dependencies": {
     "discord.js": "^11.4.2",
     "ffmpeg": "0.0.4",
@@ -22,7 +18,12 @@
     "opus": "^0.0.0",
     "opusscript": "^0.0.6",
     "save": "^2.3.3"
-    "request": "2.81.0"
-
-
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
+
