@@ -19,7 +19,8 @@ client.on('message', function (message) {
 
     if (typeof(voc) !== 'undefined'){
     voc.join()
-    .then(connection => {connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()})})
+    .then(connection => { console.log('zizi')
+     connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()})})
  }
 
 }
