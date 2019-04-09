@@ -19,13 +19,22 @@ client.on('message', function (message) {
 
     if (typeof(voc) !== 'undefined'){
     voc.join()
-    .then(connection => { console.log('zizi')
-     connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()
-                                                          console.log('end')})})
+    .then(connection => {connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()})})
  }
-
 }
-})
+});
+
+client.on('message', function (message) {
+    if (message.content === '007') {
+    const voc = message.member.voiceChannel
+    console.log(voc)
+
+    if (typeof(voc) !== 'undefined'){
+    voc.join()
+    .then(connection => {connection.playFile('./007.mp3').on('end', function() {connection.disconnect()})})
+ }
+}
+});
 
  
 
