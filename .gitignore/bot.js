@@ -36,6 +36,18 @@ client.on('message', function (message) {
 }
 });
 
+client.on('message', function (message) {
+    if (message.content === 'aieaieouille') {
+    const voc = message.member.voiceChannel
+    console.log(voc)
+
+    if (typeof(voc) !== 'undefined'){
+    voc.join()
+    .then(connection => {connection.playFile('./aieaieouille.mp3').on('end', function() {connection.disconnect()})})
+ }
+}
+});
+
  
 
 // THIS  MUST  BE  THIS  WAY
