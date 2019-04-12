@@ -6,50 +6,23 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 
-    console.log('I am ready!');
+    console.log('prêt !');
 
 });
 
- 
+var sons = ['007','fanta','aieaieouille']
+
 
 client.on('message', function (message) {
-    if (message.content === 'fanta') {
+    if (sons.includes(message.content) === true && client.voiceConnections.size === 0 ) {
     const voc = message.member.voiceChannel
-    console.log(voc)
-
+    console.log(client.user)
     if (typeof(voc) !== 'undefined'){
     voc.join()
-    .then(connection => {connection.playFile('./tg.mp3').on('end', function() {connection.disconnect()})})
+    .then(connection => {connection.playFile('./'+message.content+'.mp3').on('end', function() {connection.disconnect()})})
  }
 }
 });
 
-client.on('message', function (message) {
-    if (message.content === '007') {
-    const voc = message.member.voiceChannel
-    console.log(voc)
-
-    if (typeof(voc) !== 'undefined'){
-    voc.join()
-    .then(connection => {connection.playFile('./007.mp3').on('end', function() {connection.disconnect()})})
- }
-}
-});
-
-client.on('message', function (message) {
-    if (message.content === 'aieaieouille') {
-    const voc = message.member.voiceChannel
-    console.log(voc)
-
-    if (typeof(voc) !== 'undefined'){
-    voc.join()
-    .then(connection => {connection.playFile('./aieaieouille.mp3').on('end', function() {connection.disconnect()})})
- }
-}
-});
-
- 
-
-// THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
