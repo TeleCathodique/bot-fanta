@@ -10,7 +10,7 @@ client.on('ready', () => {
 
 });
 
-var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde']
+var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain']
 
 
 client.on('message', function (message) {
