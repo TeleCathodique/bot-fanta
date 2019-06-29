@@ -23,7 +23,7 @@ client.on('message', function (message) {
  }
 }
    if (message.content === 'fantaliste') {
-    message.channel.send ('sons')
+    message.channel.send (sons)
    }
 });
 
