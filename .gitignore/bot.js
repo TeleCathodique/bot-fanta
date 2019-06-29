@@ -25,6 +25,19 @@ client.on('message', function (message) {
    if (message.content === 'fantaliste') {
     message.channel.send (sons)
    }
+   
+   const mots = message.content.split(' ; ')
+    if (mots[0] === 'fanta renomme'){
+        const gugus = (message.guild.members.find(function(membre){return membre.nickname.toLocaleLowerCase() === mots[1].toLocaleLowerCase()}))
+        console.log(gugus)
+        if (gugus !== null){
+            gugus.setNickname(mots[2])
+        }
+    }
+    
+   
+   
+   }
 });
 
 
