@@ -22,7 +22,12 @@ client.on('message', function (message) {
     .then(connection => {connection.playFile('./'+message.content+'.mp3').on('end', function() {connection.disconnect()})})
  }
 }
+   if (message.content === 'fantaliste') {
+    message.channel.send ('sons')
+   }
 });
+
+
 
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
