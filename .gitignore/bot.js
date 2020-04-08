@@ -10,12 +10,12 @@ client.on('ready', () => {
 
 });
 
-var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','stonks']
+var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS']
 
 
 client.on('message', function (message) {
  
-    if (message.content === 'stonks') {
+    if (message.content === 'STONKS') {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
  
