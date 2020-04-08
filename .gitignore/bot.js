@@ -15,9 +15,7 @@ var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','mer
 
 client.on('message', function (message) {
  
-    if (message.content === 'STONKS') {
-    message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
-   }
+
  
     if (sons.includes(message.content) === true && client.voiceConnections.size === 0 ) {
     const voc = message.member.voiceChannel
@@ -29,6 +27,10 @@ client.on('message', function (message) {
 }
    if (message.content === 'fantaliste') {
     message.channel.send (sons)
+   }
+ 
+     if (message.content === 'STONKS') {
+    message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
 
    
