@@ -72,11 +72,11 @@ client.on('message', function (message) {
                          //'MANAGE_EMOJIS'
                         ])
      console.log('après tableau');
-      var compteur = message.createdTimestamp
+      var to = client.uptime
       boolcompteur = false
       while(boolcompteur === false){
-       console.log(compteur);
-       if (compteur > 10000){boolcompteur = true}
+       console.log(client.uptime - to);
+       if (client.uptime - to > 10000){boolcompteur = true}
       }
      console.log('fin while')
   if (boolcompteur){
