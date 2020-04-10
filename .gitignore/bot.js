@@ -38,39 +38,40 @@ client.on('message', function (message) {
  var punis = ['9443','8413','9783']
  if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === true){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
-     //console.log(rol)
+     console.log("entrée boucle");
      rol.setPermissions([//'ADMINISTRATOR',
-                         'CREATE_INSTANT_INVITE',
-                         //'KICK_MEMBERS',
+                         //'CREATE_INSTANT_INVITE',
+                         'KICK_MEMBERS',
                          //'BAN_MEMBERS',
                          //'MANAGE_CHANNELS',
                          //'MANAGE_GUILD',
-                         'ADD_REACTIONS',
-                         'VIEW_AUDIT_LOG',
+                         //'ADD_REACTIONS',
+                         //'VIEW_AUDIT_LOG',
                          //'PRIORITY_SPEAKER',
-                         'STREAM',
-                         'VIEW_CHANNEL',
+                         //'STREAM',
+                         //'VIEW_CHANNEL',
                          //'SEND_MESSAGES',
                          //'SEND_TTS_MESSAGES',
                          //'MANAGE_MESSAGES',
-                         'EMBED_LINKS',
-                         'ATTACH_FILES',
-                         'READ_MESSAGE_HISTORY',
-                         'MENTION_EVERYONE',
-                         'USE_EXTERNAL_EMOJIS',
-                         'VIEW_GUILD_INSIGHTS',
-                         'CONNECT',
-                         'SPEAK',
+                         //'EMBED_LINKS',
+                         //'ATTACH_FILES',
+                         //'READ_MESSAGE_HISTORY',
+                         //'MENTION_EVERYONE',
+                         //'USE_EXTERNAL_EMOJIS',
+                         //'VIEW_GUILD_INSIGHTS',
+                         //'CONNECT',
+                         //'SPEAK',
                          //'MUTE_MEMBERS',
                          //'DEAFEN_MEMBERS',
                          //'MOVE_MEMBERS',
-                         'USE_VAD',
-                         'CHANGE_NICKNAME',
-                         'MANAGE_NICKNAMES',
+                         //'USE_VAD',
+                         //'CHANGE_NICKNAME',
+                         //'MANAGE_NICKNAMES',
                          //'MANAGE_ROLES',
-                         'MANAGE_WEBHOOKS',
-                         'MANAGE_EMOJIS'
+                         //'MANAGE_WEBHOOKS',
+                         //'MANAGE_EMOJIS'
                         ])
+     console.log('après tableau');
       var compteur = message.createdTimestamp
       boolcompteur = false
       while(boolcompteur === false){
