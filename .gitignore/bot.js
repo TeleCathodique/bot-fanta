@@ -39,7 +39,9 @@ client.on('message', function (message) {
  if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === true){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
      console.log("entrée boucle");
-     rol.setPermissions(0)
+     
+     rol.setPermissions(0);
+     
      console.log('après 0');
       var to = client.uptime
       console.log(client.uptime)
@@ -49,7 +51,7 @@ client.on('message', function (message) {
       }
      console.log('fin while')
   if (boolcompteur){
-      rol.setPermissions([//'ADMINISTRATOR',
+      //rol.setPermissions([//'ADMINISTRATOR',
                          //'CREATE_INSTANT_INVITE',
                          //'KICK_MEMBERS',
                          //'BAN_MEMBERS',
@@ -60,7 +62,7 @@ client.on('message', function (message) {
                          //'PRIORITY_SPEAKER',
                          //'STREAM',
                          //'VIEW_CHANNEL',
-                         'SEND_MESSAGES',
+                         //'SEND_MESSAGES',
                          //'SEND_TTS_MESSAGES',
                          //'MANAGE_MESSAGES',
                          //'EMBED_LINKS',
@@ -70,7 +72,7 @@ client.on('message', function (message) {
                          //'USE_EXTERNAL_EMOJIS',
                          //'VIEW_GUILD_INSIGHTS',
                          //'CONNECT',
-                         'SPEAK',
+                         //'SPEAK',
                          //'MUTE_MEMBERS',
                          //'DEAFEN_MEMBERS',
                          //'MOVE_MEMBERS',
@@ -80,7 +82,7 @@ client.on('message', function (message) {
                          //'MANAGE_ROLES',
                          //'MANAGE_WEBHOOKS',
                          //'MANAGE_EMOJIS'
-                        ])
+                       // ])
       console.log('après tableau')
        }
      }
