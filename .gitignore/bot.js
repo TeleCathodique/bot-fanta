@@ -27,14 +27,15 @@ client.on('message', function (message) {
 }
    if (message.content === 'fantaliste') {
     message.channel.send (sons)
-    message.channel.send (message.author.tag)
+    message.channel.send (message.author.tag.split('#')[1])
    }
  
      if (message.content === 'STONKS') {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
  
- //if (message.author. 
+ //const tagbeni = message.author.tag.split('#')[1]
+ //if (message.author.tag
 
    
    const mots = message.content.split(' ; ')
