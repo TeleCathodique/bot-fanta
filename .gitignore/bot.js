@@ -37,6 +37,7 @@ client.on('message', function (message) {
  var punis = ['9443','8413']
  if (punis.includes(message.author.tag.split('#')[1])){
      var rol = message.member.roles.highest
+     console.log(rol)
      message.channel.send (rol.name)
      }
 
