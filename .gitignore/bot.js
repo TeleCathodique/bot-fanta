@@ -52,6 +52,7 @@ client.on("roleUpdate", function(oldRole, newRole){
                          //'MANAGE_WEBHOOKS',
                          //'MANAGE_EMOJIS'
                        ])
+        boolroleupdate = false
      console.log('fin while')}
 });
 
