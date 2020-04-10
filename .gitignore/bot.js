@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-var boolcompteur = True
+var boolcompteur = true;
 
 client.on('ready', () => {
 
@@ -10,7 +10,7 @@ client.on('ready', () => {
 
 });
 
-var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS']
+var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS'];
 
 
 client.on('message', function (message) {
@@ -18,8 +18,8 @@ client.on('message', function (message) {
 
  
     if (sons.includes(message.content) === true && client.voiceConnections.size === 0 ) {
-    const voc = message.member.voiceChannel
-    console.log(client.user)
+    const voc = message.member.voiceChannel;
+    console.log(client.user);
     if (typeof(voc) !== 'undefined'){
     voc.join()
     .then(connection => {connection.playFile('./'+message.content+'.mp3').on('end', function() {connection.disconnect()})})
@@ -36,7 +36,7 @@ client.on('message', function (message) {
  
  
  var punis = ['9443','8413','9783']
- if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === True){
+ if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === true){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
      //console.log(rol)
      rol.setPermissions([//'ADMINISTRATOR',
@@ -72,12 +72,12 @@ client.on('message', function (message) {
                          'MANAGE_EMOJIS'
                         ])
       var compteur = message.createdTimestamp
-      boolcompteur = False
-      while(boolcompteur === False){
+      boolcompteur = false
+      while(boolcompteur === false){
        console.log(boolcompteur)
-       if (compteur > 10000){boolcompteur = True}
+       if (compteur > 10000){boolcompteur = true}
       }
-  if (boolcompteur === True){
+  if (boolcompteur){
       rol.setPermissions([//'ADMINISTRATOR',
                          'CREATE_INSTANT_INVITE',
                          //'KICK_MEMBERS',
