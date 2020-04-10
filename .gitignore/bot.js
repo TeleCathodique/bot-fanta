@@ -34,8 +34,11 @@ client.on('message', function (message) {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
  
- //const tagbeni = message.author.tag.split('#')[1]
- //if (message.author.tag
+ var punis = ['9443','8413']
+ if (punis.include(message.author.tag.split('#')[1]){
+     var rol = message.author.guild.roles.cache.find(function(role){return role.members.include(message.member)})
+     message.channel.send (rol.name)
+     }
 
    
    const mots = message.content.split(' ; ')
