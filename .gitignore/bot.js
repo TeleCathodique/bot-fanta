@@ -34,15 +34,12 @@ client.on('message', function (message) {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
  
- var punis = ['9443','8413']
+ var punis = ['9443','8413','9783']
  if (punis.includes(message.author.tag.split('#')[1])){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
-     var rols = message.member.roles
-     var mem = message.member
      console.log(rol)
-     //console.log(rols)
-     //console.log(mem)
-     //message.channel.send (rol.name)
+     rol..setPermissions([MANAGE_NICKNAMES])
+     
      }
 
    
