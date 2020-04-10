@@ -36,7 +36,7 @@ client.on('message', function (message) {
  
  var punis = ['9443','8413']
  if (punis.includes(message.author.tag.split('#')[1])){
-     var rol = message.author.guild.roles.cache.find(function(role){return role.members.includes(message.member)})
+     var rol = message.member.guild.roles.cache.find(function(role){return role.members.includes(message.member)})
      message.channel.send (rol.name)
      }
 
