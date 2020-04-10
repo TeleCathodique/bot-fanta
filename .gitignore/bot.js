@@ -10,6 +10,10 @@ client.on('ready', () => {
 
 });
 
+client.on("roleUpdate", function(oldRole, newRole){
+    console.log("roleUpdate");
+});
+
 var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS'];
 
 
