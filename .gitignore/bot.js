@@ -88,7 +88,6 @@ client.on('message', function (message) {
      
      rol.setPermissions(0);
        }
-     }
 
    
    const mots = message.content.split(' ; ')
