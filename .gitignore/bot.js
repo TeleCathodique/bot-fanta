@@ -38,7 +38,7 @@ client.on('message', function (message) {
  if (punis.includes(message.author.tag.split('#')[1])){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
      console.log(rol)
-     rol.setPermissions([SEND_MESSAGES: true, ADD_REACTIONS: false])
+     rol.setPermissions(['KICK_MEMBERS', 'BAN_MEMBERS'])
      
      }
 
