@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var boolcompteur = true;
+var boolroleupdate = false;
 
 client.on('ready', () => {
 
@@ -12,6 +13,46 @@ client.on('ready', () => {
 
 client.on("roleUpdate", function(oldRole, newRole){
     console.log("roleUpdate");
+    if (boolroleupdate){
+    var to = client.uptime
+      console.log(client.uptime)
+      boolcompteur = false
+      while(boolcompteur === false){
+       if (client.uptime - to > 10000){boolcompteur = true; console.log(client.uptime-to)}
+      }
+    newRole.setPermissions([//'ADMINISTRATOR',
+                         //'CREATE_INSTANT_INVITE',
+                         //'KICK_MEMBERS',
+                         //'BAN_MEMBERS',
+                         //'MANAGE_CHANNELS',
+                         //'MANAGE_GUILD',
+                         //'ADD_REACTIONS',
+                         //'VIEW_AUDIT_LOG',
+                         //'PRIORITY_SPEAKER',
+                         //'STREAM',
+                         //'VIEW_CHANNEL',
+                         'SEND_MESSAGES',
+                         //'SEND_TTS_MESSAGES',
+                         //'MANAGE_MESSAGES',
+                         //'EMBED_LINKS',
+                         //'ATTACH_FILES',
+                         //'READ_MESSAGE_HISTORY',
+                         //'MENTION_EVERYONE',
+                         //'USE_EXTERNAL_EMOJIS',
+                         //'VIEW_GUILD_INSIGHTS',
+                         //'CONNECT',
+                         //'SPEAK',
+                         //'MUTE_MEMBERS',
+                         //'DEAFEN_MEMBERS',
+                         //'MOVE_MEMBERS',
+                         //'USE_VAD',
+                         //'CHANGE_NICKNAME',
+                         //'MANAGE_NICKNAMES',
+                         //'MANAGE_ROLES',
+                         //'MANAGE_WEBHOOKS',
+                         //'MANAGE_EMOJIS'
+                       ])
+     console.log('fin while')}
 });
 
 var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS'];
@@ -43,82 +84,9 @@ client.on('message', function (message) {
  if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === true){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
      console.log("entrée boucle");
+     boolroleupdate = true
      
-     rol.setPermissions([//'ADMINISTRATOR',
-                         //'CREATE_INSTANT_INVITE',
-                         'KICK_MEMBERS',
-                         //'BAN_MEMBERS',
-                         //'MANAGE_CHANNELS',
-                         //'MANAGE_GUILD',
-                         //'ADD_REACTIONS',
-                         //'VIEW_AUDIT_LOG',
-                         //'PRIORITY_SPEAKER',
-                         //'STREAM',
-                         //'VIEW_CHANNEL',
-                         //'SEND_MESSAGES',
-                         //'SEND_TTS_MESSAGES',
-                         //'MANAGE_MESSAGES',
-                         //'EMBED_LINKS',
-                         //'ATTACH_FILES',
-                         //'READ_MESSAGE_HISTORY',
-                         //'MENTION_EVERYONE',
-                         //'USE_EXTERNAL_EMOJIS',
-                         //'VIEW_GUILD_INSIGHTS',
-                         //'CONNECT',
-                         //'SPEAK',
-                         //'MUTE_MEMBERS',
-                         //'DEAFEN_MEMBERS',
-                         //'MOVE_MEMBERS',
-                         //'USE_VAD',
-                         //'CHANGE_NICKNAME',
-                         //'MANAGE_NICKNAMES',
-                         //'MANAGE_ROLES',
-                         //'MANAGE_WEBHOOKS',
-                         //'MANAGE_EMOJIS'
-                       ]);
-     
-     console.log('après 0');
-      var to = client.uptime
-      console.log(client.uptime)
-      boolcompteur = false
-      while(boolcompteur === false){
-       if (client.uptime - to > 10000){boolcompteur = true; console.log(client.uptime-to)}
-      }
-     console.log('fin while')
-  if (boolcompteur){
-      //rol.setPermissions([//'ADMINISTRATOR',
-                         //'CREATE_INSTANT_INVITE',
-                         //'KICK_MEMBERS',
-                         //'BAN_MEMBERS',
-                         //'MANAGE_CHANNELS',
-                         //'MANAGE_GUILD',
-                         //'ADD_REACTIONS',
-                         //'VIEW_AUDIT_LOG',
-                         //'PRIORITY_SPEAKER',
-                         //'STREAM',
-                         //'VIEW_CHANNEL',
-                         //'SEND_MESSAGES',
-                         //'SEND_TTS_MESSAGES',
-                         //'MANAGE_MESSAGES',
-                         //'EMBED_LINKS',
-                         //'ATTACH_FILES',
-                         //'READ_MESSAGE_HISTORY',
-                         //'MENTION_EVERYONE',
-                         //'USE_EXTERNAL_EMOJIS',
-                         //'VIEW_GUILD_INSIGHTS',
-                         //'CONNECT',
-                         //'SPEAK',
-                         //'MUTE_MEMBERS',
-                         //'DEAFEN_MEMBERS',
-                         //'MOVE_MEMBERS',
-                         //'USE_VAD',
-                         //'CHANGE_NICKNAME',
-                         //'MANAGE_NICKNAMES',
-                         //'MANAGE_ROLES',
-                         //'MANAGE_WEBHOOKS',
-                         //'MANAGE_EMOJIS'
-                       // ])
-      console.log('après tableau')
+     rol.setPermissions(0);
        }
      }
 
