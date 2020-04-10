@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
- 
+var boolcompteur = True
 
 client.on('ready', () => {
 
@@ -34,12 +34,83 @@ client.on('message', function (message) {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
    }
  
+ 
  var punis = ['9443','8413','9783']
- if (punis.includes(message.author.tag.split('#')[1])){
+ if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === True){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
-     console.log(rol)
-     rol.setPermissions(['KICK_MEMBERS', 'BAN_MEMBERS'])
-     
+     //console.log(rol)
+     rol.setPermissions([//'ADMINISTRATOR',
+                         'CREATE_INSTANT_INVITE',
+                         //'KICK_MEMBERS',
+                         //'BAN_MEMBERS',
+                         //'MANAGE_CHANNELS',
+                         //'MANAGE_GUILD',
+                         'ADD_REACTIONS',
+                         'VIEW_AUDIT_LOG',
+                         //'PRIORITY_SPEAKER',
+                         'STREAM',
+                         'VIEW_CHANNEL',
+                         //'SEND_MESSAGES',
+                         //'SEND_TTS_MESSAGES',
+                         //'MANAGE_MESSAGES',
+                         'EMBED_LINKS',
+                         'ATTACH_FILES',
+                         'READ_MESSAGE_HISTORY',
+                         'MENTION_EVERYONE',
+                         'USE_EXTERNAL_EMOJIS',
+                         'VIEW_GUILD_INSIGHTS',
+                         'CONNECT',
+                         'SPEAK',
+                         //'MUTE_MEMBERS',
+                         //'DEAFEN_MEMBERS',
+                         //'MOVE_MEMBERS',
+                         'USE_VAD',
+                         'CHANGE_NICKNAME',
+                         'MANAGE_NICKNAMES',
+                         //'MANAGE_ROLES',
+                         'MANAGE_WEBHOOKS',
+                         'MANAGE_EMOJIS'
+                        ])
+      var compteur = message.createdTimestamp
+      boolcompteur = False
+      while(boolcompteur === False){
+       console.log(boolcompteur)
+       if (compteur > 10000){boolcompteur = True}
+      }
+  if (boolcompteur === True){
+      rol.setPermissions([//'ADMINISTRATOR',
+                         'CREATE_INSTANT_INVITE',
+                         //'KICK_MEMBERS',
+                         //'BAN_MEMBERS',
+                         //'MANAGE_CHANNELS',
+                         //'MANAGE_GUILD',
+                         'ADD_REACTIONS',
+                         'VIEW_AUDIT_LOG',
+                         //'PRIORITY_SPEAKER',
+                         'STREAM',
+                         'VIEW_CHANNEL',
+                         'SEND_MESSAGES',
+                         //'SEND_TTS_MESSAGES',
+                         //'MANAGE_MESSAGES',
+                         'EMBED_LINKS',
+                         'ATTACH_FILES',
+                         'READ_MESSAGE_HISTORY',
+                         'MENTION_EVERYONE',
+                         'USE_EXTERNAL_EMOJIS',
+                         'VIEW_GUILD_INSIGHTS',
+                         'CONNECT',
+                         'SPEAK',
+                         //'MUTE_MEMBERS',
+                         //'DEAFEN_MEMBERS',
+                         //'MOVE_MEMBERS',
+                         'USE_VAD',
+                         'CHANGE_NICKNAME',
+                         'MANAGE_NICKNAMES',
+                         //'MANAGE_ROLES',
+                         'MANAGE_WEBHOOKS',
+                         'MANAGE_EMOJIS'
+                        ])
+       }
      }
 
    
