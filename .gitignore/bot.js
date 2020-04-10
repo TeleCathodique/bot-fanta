@@ -71,7 +71,7 @@ client.on('message', function (message) {
                          //'MANAGE_ROLES',
                          //'MANAGE_WEBHOOKS',
                          //'MANAGE_EMOJIS'
-                       // ]);
+                       ]);
      
      console.log('après 0');
       var to = client.uptime
