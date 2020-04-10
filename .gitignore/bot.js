@@ -75,9 +75,10 @@ client.on('message', function (message) {
       var compteur = message.createdTimestamp
       boolcompteur = false
       while(boolcompteur === false){
-       console.log(boolcompteur)
+       console.log(compteur);
        if (compteur > 10000){boolcompteur = true}
       }
+     console.log('fin while')
   if (boolcompteur){
       rol.setPermissions(0)
        }
