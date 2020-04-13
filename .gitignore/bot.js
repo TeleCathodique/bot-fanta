@@ -81,7 +81,7 @@ client.on('message', function (message) {
    }
  
  
- var punis = ['9443']
+ var punis = ['1111']
  if (punis.includes(message.author.tag.split('#')[1]) && boolcompteur === true){
      var rol = message.member.roles.find(role => role.name !== "@everyone")
      console.log("entrée boucle");
