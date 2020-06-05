@@ -56,7 +56,7 @@ client.on("roleUpdate", function(oldRole, newRole){
      console.log('fin while')}
 });
 
-var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS'];
+var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS','gus'];
 
 
 client.on('message', function (message) {
@@ -78,6 +78,10 @@ client.on('message', function (message) {
  
      if (message.content === 'STONKS') {
     message.channel.send ('https://tenor.com/view/stonks-up-stongs-meme-stocks-gif-15715298')
+   }
+    
+    if (message.content === 'gus') {
+    message.channel.send ('https://tenor.com/view/gussdx-cdf-le-rat-gif-13667445')
    }
  
  
