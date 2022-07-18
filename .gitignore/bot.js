@@ -65,7 +65,7 @@ client.on('message', function (message) {
  
     if (sons.includes(message.content) === true && client.voiceConnections.size === 0 ) {
     const voc = message.member.voiceChannel;
-    console.log(client.user);
+    //console.log(client.user);
     if (typeof(voc) !== 'undefined'){
     voc.join()
     .then(connection => {connection.playFile('./'+message.content+'.mp3').on('end', function() {connection.disconnect()})})
@@ -99,13 +99,14 @@ client.on('message', function (message) {
 
     if (mots[0] === 'fanta renomme'){
         const gugus = (message.guild.members.find(function(membre){return membre.nickname.toLocaleLowerCase() === mots[1].toLocaleLowerCase()}))
-        console.log(gugus)
+        //console.log(gugus)
         if (gugus !== null){
             gugus.setNickname(mots[2])
         }
     }
 
     const motsEsp = message.content.split(' ')
+    console.log(motsEsp);
 
     if (motsEsp[0] === 'shifumi'){
         message.channel.send ('Shifumi entre'+motsEsp[1]+' et '+motsEsp[2]+' !')
