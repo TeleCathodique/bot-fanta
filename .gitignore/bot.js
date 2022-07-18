@@ -61,7 +61,7 @@ var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','mer
 
 client.on('message', function (message) {
  
-
+    console.log(message);
  
     if (sons.includes(message.content) === true && client.voiceConnections.size === 0 ) {
     const voc = message.member.voiceChannel;
@@ -109,7 +109,7 @@ client.on('message', function (message) {
     console.log(motsEsp);
 
     if (motsEsp[0] === 'shifumi'){
-        message.channel.send ('Shifumi entre'+motsEsp[1]+' et '+motsEsp[2]+' !')
+        message.channel.send ('Shifumi entre '+motsEsp[1]+' et '+motsEsp[2]+' !')
     }
     
 }
