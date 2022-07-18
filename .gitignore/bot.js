@@ -107,7 +107,7 @@ client.on('message', function (message) {
 
     const motsEsp = message.content.split(' ')
 
-    if (mots[0] === 'shifumi'){
+    if (motsEsp[0] === 'shifumi'){
         message.channel.send ('Shifumi entre'+motsEsp[1]+' et '+motsEsp[2]+' !')
     }
     
