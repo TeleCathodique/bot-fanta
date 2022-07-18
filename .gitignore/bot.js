@@ -69,8 +69,8 @@ client.on('message', function (message) {
     if (typeof(voc) !== 'undefined'){
     voc.join()
     .then(connection => {connection.playFile('./'+message.content+'.mp3').on('end', function() {connection.disconnect()})})
- }
-}
+    }
+    }
    if (message.content === 'fantaliste') {
     message.channel.send (sons)
     message.channel.send (message.author.tag.split('#')[1])
@@ -96,6 +96,7 @@ client.on('message', function (message) {
 
    
    const mots = message.content.split(' ; ')
+
     if (mots[0] === 'fanta renomme'){
         const gugus = (message.guild.members.find(function(membre){return membre.nickname.toLocaleLowerCase() === mots[1].toLocaleLowerCase()}))
         console.log(gugus)
@@ -103,8 +104,15 @@ client.on('message', function (message) {
             gugus.setNickname(mots[2])
         }
     }
+
+    const motsEsp = message.content.split(' ')
+
+    if (mots[0] === 'shifumi'){
+        message.channel.send ('Shifumi entre'+motsEsp[1]+' et '+motsEsp[2]+' !')
+    }
     
-});
+}
+);
 
 
 
