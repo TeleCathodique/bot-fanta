@@ -56,7 +56,7 @@ client.on("roleUpdate", function(oldRole, newRole){
      console.log('fin while')}
 });
 
-var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS','gus'];
+var sons = ['007','fanta','aieaieouille','navarro','foutre','honteux','sel','merde','pan','mauvais','putain','karaba','fun','dansledos','chialer','salut','étrangler','STONKS','gus','sardoche'];
 
 
 client.on('message', function (message) {
