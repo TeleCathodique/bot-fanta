@@ -108,7 +108,10 @@ const datastop = new SlashCommandBuilder()
 
 client.on('ready', () => {
 
-    var IdServeur = "460516066859417612";
+    // var IdServeur = "460516066859417612"; //test
+	
+    var IdServeur = "306158324733181952"; //longueV
+
 
     client.guilds.cache.get(IdServeur).commands.create(datajouer); // crée la commande jouer
     client.guilds.cache.get(IdServeur).commands.create(datashifumi); // crée la commande Shifumi
